@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    index page
+{% endblock title %}
+
+{% block content %}
+<style>
+     a {
+                color: #ff0000;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            a:hover {
+                color: #666;
+            }
+
+            /* Underline on hover */
+            a.underline:hover {
+                text-decoration: underline;
+            }
+
+            /* Border on hover */
+            a.border:hover {
+                border-bottom: 1px solid #333;
+            }
+
+            /* Background color on hover */
+            a.background:hover {
+                background-color: #333;
+                color: #fff;
+            }
+
+            /* Rounded corners on hover */
+            a.rounded:hover {
+                border-radius: 5px;
+            }
+            h1{
+                text-align: center;
+                padding: 24px;
+            }
+            p,a{
+                text-align: center;
+            }
+</style>
+    <h1 >
+        this is index page
+        
+    </h1>
+    <p style="padding: 18px; margin: 23px;">
+        Django is a high-level web framework written in Python that follows the Model-View-Controller (MVC) architectural
+        pattern. It aims to simplify and accelerate web development by providing a set of tools and conventions.
+    
+        Here are some key features and concepts of Django:
+    
+        Object-Relational Mapping (ORM): Django includes a powerful ORM that allows developers to interact with the database
+        using Python objects. It abstracts away the complexities of SQL queries and provides a convenient way to define
+        database models and perform database operations.
+    
+        URL Routing and View Functions: Django uses a URL routing system to map URLs to view functions. URLs are defined in
+        a centralized urls.py file, and each URL pattern is associated with a corresponding view function or class-based
+        view. Views handle HTTP requests, process the logic, and return an HTTP response.
+    
+        Template Engine: Django has its own template engine, which allows you to create dynamic HTML templates by combining
+        HTML with template tags and filters. Templates support variables, loops, conditionals, and other control structures,
+        making it easier to generate dynamic content.
+    
+        Forms and Form Validation: Django provides a form handling system that simplifies the process of handling user input
+        and form validation. It includes built-in form fields, form validation, and error handling mechanisms.
+    
+        Authentication and Authorization: Django offers a robust authentication system that handles user registration,
+        login, logout, and password management. It also provides authorization mechanisms to control access to different
+        parts of the application based on user roles and permissions.
+    
+         secure web development.
+    
+        Scalability and Reusability: Django is designed with scalability in mind, allowing developers to build complex and
+        scalable web applications. It promotes modular and reusable code by encouraging the use of apps, which are
+        self-contained modules that encapsulate specific functionalities.
+    
+    
+    </p>
+    <p>
+        <a href="{% url 'apps:home' %}">back to home</a>
+    </p>
+    
+    
+{% endblock content %}
